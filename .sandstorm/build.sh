@@ -12,6 +12,8 @@ if [ -f /opt/app/composer.json ] ; then
     php composer.phar install --no-dev -o
 fi
 
+sudo /etc/init.d/mysql stop
+sudo /etc/init.d/mysql start
 echo "CREATE DATABASE IF NOT EXISTS cachet; GRANT ALL on cachet.* TO 'cachet'@'localhost' IDENTIFIED BY 'cachet'; FLUSH PRIVILEGES;" | mysql -h localhost -u root
 php artisan key:generate
 php artisan app:install

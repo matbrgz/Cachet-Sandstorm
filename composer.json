@@ -95,8 +95,7 @@
             "Illuminate\\Foundation\\ComposerScripts::postInstall",
             "php artisan optimize --force",
             "php artisan config:cache",
-            "php artisan route:cache",
-            "ln -sr storage/app/public public/storage"
+            "php artisan route:cache"
         ],
         "post-update-cmd": [
             "Illuminate\\Foundation\\ComposerScripts::postUpdate",
