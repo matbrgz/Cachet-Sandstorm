@@ -13,13 +13,5 @@ mkdir -p /var/run
 rm -rf /var/tmp
 mkdir -p /var/tmp
 
-# sqlite database
-touch /opt/app/database/database.sqlite
-chmod 777 /opt/app/database/database.sqlite
-
-#permissions
-chmod -R 777 /opt/app/bootstrap/
-chmod -R 777 /opt/app/storage
-
 # Start nginx.
 /usr/sbin/nginx -c /opt/app/.sandstorm/service-config/nginx.conf -g "daemon off;"

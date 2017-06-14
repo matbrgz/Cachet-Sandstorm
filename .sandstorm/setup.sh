@@ -28,3 +28,11 @@ sed --in-place='' \
 sed --in-place='' \
         --expression='s/^;clear_env = no/clear_env=no/' \
         /etc/php5/fpm/pool.d/www.conf
+
+# sqlite database
+touch /opt/app/database/database.sqlite
+chmod 777 /opt/app/database/database.sqlite
+
+#permissions
+chmod -R 777 /opt/app/bootstrap/
+chmod -R 777 /opt/app/storage

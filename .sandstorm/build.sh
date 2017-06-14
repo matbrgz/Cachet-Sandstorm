@@ -13,5 +13,4 @@ if [ -f /opt/app/composer.json ] ; then
 fi
 
 php artisan key:generate
-php artisan migrate
 php artisan app:install
